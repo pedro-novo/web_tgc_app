@@ -48,7 +48,7 @@ const ProductDetails = () => {
           fontWeight={600}
           sx={{ transform: " translate(-50%, -50%)" }}
         >
-          {getProduct[0].name}
+          {getProduct[0]?.name}
         </Typography>
       </Box>
       <Box textAlign='center' m={4}>
@@ -56,7 +56,7 @@ const ProductDetails = () => {
           <Grid item xs={12} md={6}>
             <Box textAlign='center'>
               <img
-                src={getProduct[0].image}
+                src={getProduct[0]?.image}
                 style={{ maxWidth: "40vw", height: "auto" }}
               />
             </Box>
@@ -79,7 +79,7 @@ const ProductDetails = () => {
                   maxWidth='40vw'
                   fontSize={18}
                 >
-                  {getProduct[0].name}
+                  {getProduct[0]?.name}
                 </Typography>
                 <Typography
                   variant='subtitle1'
@@ -88,7 +88,7 @@ const ProductDetails = () => {
                   fontSize={14}
                   marginBottom={4}
                 >
-                  {getProduct[0].set}
+                  {getProduct[0]?.set}
                 </Typography>
                 <Typography
                   variant='subtitle1'
@@ -111,7 +111,7 @@ const ProductDetails = () => {
                   fontSize={16}
                   marginBottom={1}
                 >
-                  €{getProduct[0].price}
+                  €{getProduct[0]?.price}
                 </Typography>
               </Box>
               <Box textAlign='left' justifyContent='center' maxWidth='40vw'>
@@ -119,7 +119,7 @@ const ProductDetails = () => {
                   fullWidth
                   variant='contained'
                   onClick={() => {
-                    addToCart(getProduct[0].id);
+                    addToCart(getProduct[0]?.id);
                   }}
                   sx={{ maxWidth: "25vw" }}
                 >
